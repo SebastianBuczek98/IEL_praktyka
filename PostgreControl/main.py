@@ -1,5 +1,5 @@
 import psycopg2
-conn = psycopg2.connect(user="postgres", password="haslo", database="IEL", host="localhost", port="5432")
+conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="10.10.6.217", port="5432")
 print("Connected to: ", conn)
 
 cursor = conn.cursor()
@@ -11,10 +11,13 @@ print("Connected into - ", version)
 def insert():
     insert_loop = True
     while True:
-        print("Temp: ")
+        print('\n("z" aby wyjsc)')
+        print("Podaj pomiar temperatury: ")
         try:
-            ins_temp = float(input())
-            cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp) VALUES (%s);', [ins_temp])
+            ins_temp = input()
+            if ins_temp == 'z':
+                break
+            cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp) VALUES (%s);', [float(ins_temp)])
             conn.commit()
             print("Poprawnie wprowadzono pomiar do bazy\n")
             insert_loop = False
