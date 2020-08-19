@@ -42,17 +42,24 @@ def display_all():
         print("Exception: ", error2, "\n")
 
 
+def rysujWykres():
+    print("Wpisz okres: ")
+    
+
 menuloop = True
 while menuloop:
     print("\nWybierz akcje: \n"
           "1. Insert \n"
           "2. Wyswietl baze\n"
+          "3. Rysuj wykres\n"
           "0. Zakoncz dzialanie programu")
     choice = input()
     if choice == '1':
         insert()
     elif choice == '2':
         display_all()
+    elif choice == '3':
+        rysujWykres()
     elif choice == '0':
         menuloop = False
 
