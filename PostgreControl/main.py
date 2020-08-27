@@ -1,7 +1,11 @@
 import psycopg2
 import matplotlib.pyplot as plt
+import datetime
+from matplotlib import dates
+import numpy
 
-conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="10.10.6.217", port="5432")
+
+conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="10.10.6.204", port="5432")
 print("Connected to: ", conn)
 
 cursor = conn.cursor()
@@ -47,21 +51,34 @@ def display_all():
 def rysujWykres():
     print("Okres czasu od (YYYY-MM-DD GG:MM:SS): ")
     date_start = input()                #Pobranie daty początkowej
+    #date_start = '2020-08-12'
     print("Do (YYYY-MM-DD GG:MM:SS): ")
     date_end = input()                  #Pobranie daty końcowej
+    #date_end = '2020-08-13'
     try:
-        cursor.execute("SELECT * FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  #backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
+        cursor.execute("SELECT \"date\", \"temp\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  #backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
         date = cursor.fetchall()
         for row in date:            #wyświetlenie rekordow (dla sprawdzenia poprawnosci dzialania)
-            print("ID: ", row[0])
-            print("Temp: ", row[1])
-            print("Date: ", row[2], "\n")
+            print("Date: ", row[0])
+            print("Temp: ", row[1], "\n")
+        datetoplot, value = zip(*date)
+        datetoplot2 = dates.date2num(datetoplot)
+
+        plt.plot_date(datetoplot2, value)
+        plt.xticks(rotation='vertical')
+        plt.setp(plt.xticks()[1], rotation=70)
+        plt.plot_date(datetoplot, value, fmt="r-")
+        plt.gcf().subplots_adjust(bottom=0.15)
+        plt.xlabel("Czas")
+        plt.ylabel("Temperatura")
+        plt.autoscale()
+        plt.show()
     except (Exception, psycopg2.Error, TypeError) as error3:
         print(error3)
 
 
 def wykres():
-    plt.plot([1, 2, 3, 4], [5, 6, 7, 7])
+    plt.plot([1, 2, 3, 4], [5, 3, 7, 7])
     plt.show()
 
 
