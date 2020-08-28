@@ -23,7 +23,7 @@ def insert():
             ins_temp = input()
             if ins_temp == 'z':
                 break
-            cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp) VALUES (%s);', [float(ins_temp)])
+            cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp1) VALUES (%s);', [float(ins_temp)])
             conn.commit()
             print("Poprawnie wprowadzono pomiar do bazy\n")
             insert_loop = False
@@ -41,14 +41,22 @@ def display_all():
 
         for row in db_data:
             print("ID: ", row[0])
-            print("Temp: ", row[1])
-            print("Date: ", row[2], "\n")
+            print("Temp1: ", row[1])
+            print("Temp2: ", row[2])
+            print("Date: ", row[3], "\n")
 
     except (Exception, psycopg2.Error) as error2:
         print("Exception: ", error2, "\n")
 
 
 def rysujWykres():
+    plotprint = "Temperatura"
+
+    print("Wybierz czujnik: \n"
+          "1. Dokladnosc pomiaru .01\n"
+          "2. Dokladnosc pomiaru 1\n"
+          "3. Obydwa czujniki\n")
+    wybor_czujnika = input()
     print("Okres czasu od (YYYY-MM-DD GG:MM:SS): ")
     date_start = input()                #Pobranie daty początkowej
     #date_start = '2020-08-12'
@@ -56,7 +64,14 @@ def rysujWykres():
     date_end = input()                  #Pobranie daty końcowej
     #date_end = '2020-08-13'
     try:
-        cursor.execute("SELECT \"date\", \"temp\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  #backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
+        if wybor_czujnika == '1':
+            cursor.execute("SELECT \"date\", \"temp1\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  #backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
+            plotprint = "Temperatura (Czujnik 1)"
+        if wybor_czujnika == '2':
+            cursor.execute("SELECT \"date\", \"temp2\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  #backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
+            plotprint = "Temperatura (Czujnik 2)"
+        if wybor_czujnika == '2':
+            cursor.execute("SELECT \"date\", \"temp1\", \"temp2\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  # backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
         date = cursor.fetchall()
         for row in date:            #wyświetlenie rekordow (dla sprawdzenia poprawnosci dzialania)
             print("Date: ", row[0])
@@ -70,7 +85,7 @@ def rysujWykres():
         plt.plot_date(datetoplot, value, fmt="r-")
         plt.gcf().subplots_adjust(bottom=0.15)
         plt.xlabel("Czas")
-        plt.ylabel("Temperatura")
+        plt.ylabel(plotprint)
         plt.autoscale()
         plt.show()
     except (Exception, psycopg2.Error, TypeError) as error3:
