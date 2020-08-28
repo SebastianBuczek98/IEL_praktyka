@@ -70,23 +70,27 @@ def rysujWykres():
         if wybor_czujnika == '2':
             cursor.execute("SELECT \"date\", \"temp2\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  #backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
             plotprint = "Temperatura (Czujnik 2)"
-        if wybor_czujnika == '2':
-            cursor.execute("SELECT \"date\", \"temp1\", \"temp2\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  # backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
+        if wybor_czujnika == '3':
+            cursor.execute("SELECT \"date\", \"temp1\", \"temp2\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])
         date = cursor.fetchall()
         for row in date:            #wyświetlenie rekordow (dla sprawdzenia poprawnosci dzialania)
             print("Date: ", row[0])
-            print("Temp: ", row[1], "\n")
-        datetoplot, value = zip(*date)
+            print("Temp1: ", row[1], "\n")
+            print("Temp2: ", row[2], "\n")
+        datetoplot, value1, value2 = zip(*date)
         datetoplot2 = dates.date2num(datetoplot)
 
-        plt.plot_date(datetoplot2, value)
+        plt.plot_date(datetoplot2, value1)
+        plt.plot_date(datetoplot2, value2)
         plt.xticks(rotation='vertical')
         plt.setp(plt.xticks()[1], rotation=70)
-        plt.plot_date(datetoplot, value, fmt="r-")
-        plt.gcf().subplots_adjust(bottom=0.15)
+        plt.plot_date(datetoplot, value1, fmt="r-", label='Czujnik 1')
+        plt.plot_date(datetoplot, value2, fmt="g-", label='Czujnik 2')
+        #plt.gcf().subplots_adjust(bottom=0.15)
         plt.xlabel("Czas")
         plt.ylabel(plotprint)
         plt.autoscale()
+        plt.legend()
         plt.show()
     except (Exception, psycopg2.Error, TypeError) as error3:
         print(error3)
