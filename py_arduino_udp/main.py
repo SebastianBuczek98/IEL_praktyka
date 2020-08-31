@@ -45,6 +45,7 @@ while True:
             conn.commit()
             print("Sent!")
         else:
+            print("Not sent")
             time.sleep(10)
         del rec_data2, rec_data1, a1
         print()

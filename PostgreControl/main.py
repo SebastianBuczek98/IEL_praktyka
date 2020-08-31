@@ -23,7 +23,7 @@ def insert():
             ins_temp = input()
             if ins_temp == 'z':
                 break
-            cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp1) VALUES (%s);', [float(ins_temp)])
+            cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp1, temp2) VALUES (%s, %s);', [float(ins_temp), float(ins_temp)])
             conn.commit()
             print("Poprawnie wprowadzono pomiar do bazy\n")
             insert_loop = False
