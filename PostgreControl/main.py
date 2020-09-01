@@ -5,7 +5,8 @@ from matplotlib import dates
 import numpy
 
 
-conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="10.10.6.204", port="5432")
+#conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="10.10.6.204", port="5432")
+conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="192.168.0.19", port="5432")
 print("Connected to: ", conn)
 
 cursor = conn.cursor()
@@ -49,12 +50,26 @@ def display_all():
         print("Exception: ", error2, "\n")
 
 
+def display_last():
+    try:
+        cursor.execute('select * from public."TABLE1" where date = (select max(date) from public."TABLE1")')
+        db_data = cursor.fetchall()
+        for row in db_data:
+            print("ID: ", row[0])
+            print("Temp1: ", row[1])
+            print("Temp2: ", row[2])
+            print("Date: ", row[3], "\n")
+    except (Exception, psycopg2.Error) as error3:
+        print("Exception: ", error3, "\n")
+
+
 def rysujWykres():
     plotprint = "Temperatura"
+    plotsensor = "Czujnik"
 
     print("Wybierz czujnik: \n"
-          "1. Dokladnosc pomiaru .01\n"
-          "2. Dokladnosc pomiaru 1\n"
+          "1. Czujnik 1 - dokladnosc pomiaru .01\n"
+          "2. Czujnik 2 - dokladnosc pomiaru 1\n"
           "3. Obydwa czujniki\n")
     wybor_czujnika = input()
     print("Okres czasu od (YYYY-MM-DD GG:MM:SS): ")
@@ -67,25 +82,38 @@ def rysujWykres():
         if wybor_czujnika == '1':
             cursor.execute("SELECT \"date\", \"temp1\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  #backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
             plotprint = "Temperatura (Czujnik 1)"
+            plotsensor = "Czujnik 1"
         if wybor_czujnika == '2':
             cursor.execute("SELECT \"date\", \"temp2\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])  #backslashe są konieczne aby cudzysłowy nie były rozpoznawane jako znaki specjalne dla pythona, a dla postgre
             plotprint = "Temperatura (Czujnik 2)"
+            plotsensor = "Czujnik 2"
         if wybor_czujnika == '3':
             cursor.execute("SELECT \"date\", \"temp1\", \"temp2\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])
         date = cursor.fetchall()
         for row in date:            #wyświetlenie rekordow (dla sprawdzenia poprawnosci dzialania)
             print("Date: ", row[0])
-            print("Temp1: ", row[1], "\n")
-            print("Temp2: ", row[2], "\n")
-        datetoplot, value1, value2 = zip(*date)
-        datetoplot2 = dates.date2num(datetoplot)
+            print("Temp1: ", row[1])
+            if wybor_czujnika == '3':
+                print("Temp2: ", row[2], "\n")
+            else:
+                print("\n")
+        if wybor_czujnika == '3':
+            datetoplot, value1, value2 = zip(*date)
+            datetoplot2 = dates.date2num(datetoplot)
+            plt.plot_date(datetoplot2, value2)
+            plt.plot_date(datetoplot2, value1)
+            plt.xticks(rotation='vertical')
+            plt.setp(plt.xticks()[1], rotation=70)
+            plt.plot_date(datetoplot, value1, fmt="r-", label='Czujnik 1')
+            plt.plot_date(datetoplot, value2, fmt="g-", label='Czujnik 2')
+        else:
+            datetoplot, value1 = zip(*date)
+            datetoplot2 = dates.date2num(datetoplot)
+            plt.plot_date(datetoplot2, value1)
+            plt.xticks(rotation='vertical')
+            plt.setp(plt.xticks()[1], rotation=70)
+            plt.plot_date(datetoplot, value1, fmt="r-", label=plotsensor)
 
-        plt.plot_date(datetoplot2, value1)
-        plt.plot_date(datetoplot2, value2)
-        plt.xticks(rotation='vertical')
-        plt.setp(plt.xticks()[1], rotation=70)
-        plt.plot_date(datetoplot, value1, fmt="r-", label='Czujnik 1')
-        plt.plot_date(datetoplot, value2, fmt="g-", label='Czujnik 2')
         #plt.gcf().subplots_adjust(bottom=0.15)
         plt.xlabel("Czas")
         plt.ylabel(plotprint)
@@ -104,19 +132,22 @@ def wykres():
 menuloop = True
 while menuloop:
     print("\nWybierz akcje: \n"
-          "1. Insert \n"
-          "2. Wyswietl baze\n"
-          "3. Rysuj wykres\n"
+          #"1. Insert \n"
+          "1. Wyświetl najnowszy pomiar\n"
+          "2. Rysuj wykres\n"
           "0. Zakoncz dzialanie programu")
     choice = input()
     if choice == '1':
-        insert()
+        #insert()
+        #display_all()
+        display_last()
     elif choice == '2':
-        display_all()
-    elif choice == '3':
+        #display_all()
         rysujWykres()
-    elif choice == '4':
-        wykres()
+    #elif choice == '3':
+    #    rysujWykres()
+    #elif choice == '4':
+    #    wykres()
     elif choice == '0':
         menuloop = False
 
