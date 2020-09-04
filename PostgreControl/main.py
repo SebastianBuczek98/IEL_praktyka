@@ -6,7 +6,7 @@ import numpy
 
 
 #conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="10.10.6.204", port="5432")
-conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="192.168.107.14", port="5432")
+conn = psycopg2.connect(user="guest", password="guest", database="IEL-ZNE", host="192.168.107.14", port="5432")
 print("Connected to: ", conn)
 
 cursor = conn.cursor()

@@ -4,7 +4,7 @@ import time
 
 
 #conn = psycopg2.connect(user="sensor", password="sensor", database="IEL", host="10.10.6.204", port="5432")
-conn = psycopg2.connect(user="sensor", password="sensor", database="IEL", host="192.168.107.14", port="5432")
+conn = psycopg2.connect(user="sensor", password="sensor", database="IEL-ZNE", host="192.168.107.14", port="5432")
 print("Connected to: ", conn)
 cursor = conn.cursor()
 
