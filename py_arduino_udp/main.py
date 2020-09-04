@@ -40,7 +40,7 @@ while True:
             rec_data2 = str(tempx)
         a1 = a1/100
         a1 = str(a1)
-        print("Skorygowane pomiary S1 & S2 is: ", a1 ," & ", rec_data2)  # Print the result
+        print("Skorygowane pomiary S1 & S2 to: ", a1 ," & ", rec_data2)  # Print the result
         if(float(a1)>1 and float(a1)<100 and float(rec_data2)>1 and float(rec_data2)<100):
             cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp1, temp2) VALUES (%s, %s)', [a1, rec_data2])
             conn.commit()
