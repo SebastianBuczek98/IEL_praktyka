@@ -6,7 +6,7 @@ import numpy
 
 
 #conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="10.10.6.204", port="5432")
-conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="192.168.0.19", port="5432")
+conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="192.168.107.14", port="5432")
 print("Connected to: ", conn)
 
 cursor = conn.cursor()
@@ -55,7 +55,7 @@ def display_last():
         cursor.execute('select * from public."TABLE1" where date = (select max(date) from public."TABLE1")')
         db_data = cursor.fetchall()
         for row in db_data:
-            print("ID: ", row[0])
+            print("\nID: ", row[0])
             print("Temp1: ", row[1])
             print("Temp2: ", row[2])
             print("Date: ", row[3], "\n")
