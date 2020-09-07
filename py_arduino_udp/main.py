@@ -2,16 +2,19 @@ from socket import *
 import psycopg2
 import time
 
-
-#conn = psycopg2.connect(user="sensor", password="sensor", database="IEL", host="10.10.6.204", port="5432")
-conn = psycopg2.connect(user="sensor", password="sensor", database="IEL-ZNE", host="192.168.107.14", port="5432")
-print("Connected to: ", conn)
-cursor = conn.cursor()
+try:
+    #conn = psycopg2.connect(user="sensor", password="sensor", database="IEL", host="10.10.6.204", port="5432")
+    conn = psycopg2.connect(user="sensor", password="sensor", database="IEL-ZNE", host="192.168.107.14", port="5432")
+    print("Connected to: ", conn)
+    cursor = conn.cursor()
+except (Exception, psycopg2.Error) as error3:
+    print("Exception: ", error3)
+    exit()
 
 address = ('192.168.107.7', 8888)  # define server IP and port
 client_socket = socket(AF_INET, SOCK_DGRAM)  # Set up the Socket
 client_socket.settimeout(8)  # Only wait x second for a response
-exitval = 1
+err_count = 0
 
 while True:
 
@@ -40,8 +43,8 @@ while True:
             rec_data2 = str(tempx)
         a1 = a1/100
         a1 = str(a1)
-        print("Skorygowane pomiary S1 & S2 to: ", a1 ," & ", rec_data2)  # Print the result
-        if(float(a1)>1 and float(a1)<100 and float(rec_data2)>1 and float(rec_data2)<100):
+        print("Skorygowane pomiary S1 & S2 to: ", a1, " & ", rec_data2)  # Print the result
+        if 1 < float(a1) < 80 and 1 < float(rec_data2) < 80:
             cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp1, temp2) VALUES (%s, %s)', [a1, rec_data2])
             conn.commit()
             print("Wyslano pomiar do bazy!")
@@ -53,7 +56,15 @@ while True:
 
     except (Exception, psycopg2.Error) as error:
         print("Exception: ", error)
-        exitval = 0
+        err_count += 1
+        if err_count >= 5:
+            try:
+                cursor.execute('INSERT INTO PUBLIC."TABLE1"(temp1, temp2) VALUES (0, 0)')
+                conn.commit()
+                print("Pieciokrotny blad polaczenia, wyslano pusty pomiar (0, 0)")
+                err_count = 0
+            except (Exception, psycopg2.Error) as error2:
+                print("Exception: ", error2)
         pass
 
     time.sleep(10)  # delay before sending next command
