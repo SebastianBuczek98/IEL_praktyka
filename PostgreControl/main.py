@@ -90,13 +90,13 @@ def rysujWykres():
         if wybor_czujnika == '3':
             cursor.execute("SELECT \"date\", \"temp1\", \"temp2\" FROM PUBLIC.\"TABLE1\" WHERE \"date\" between (%s) and (%s)", [date_start, date_end])
         date = cursor.fetchall()
-        for row in date:            #wyświetlenie rekordow (dla sprawdzenia poprawnosci dzialania)
-            print("Date: ", row[0])
-            print("Temp1: ", row[1])
-            if wybor_czujnika == '3':
-                print("Temp2: ", row[2], "\n")
-            else:
-                print("\n")
+        #for row in date:            #wyświetlenie rekordow (dla sprawdzenia poprawnosci dzialania)
+        #    print("Date: ", row[0])
+        #    print("Temp1: ", row[1])
+        #    if wybor_czujnika == '3':
+        #        print("Temp2: ", row[2], "\n")
+        #    else:
+        #        print("\n")
         if wybor_czujnika == '3':
             datetoplot, value1, value2 = zip(*date)
             datetoplot2 = dates.date2num(datetoplot)
