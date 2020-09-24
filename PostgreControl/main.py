@@ -1,8 +1,6 @@
 import psycopg2
 import matplotlib.pyplot as plt
-import datetime
 from matplotlib import dates
-import numpy
 
 
 #conn = psycopg2.connect(user="guest", password="guest", database="IEL", host="10.10.6.204", port="5432")
