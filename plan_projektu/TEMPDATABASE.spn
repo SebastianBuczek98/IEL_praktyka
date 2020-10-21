@@ -1,0 +1,354 @@
+<plan password="" programversion="5.0.1.014" view="plan" desc="" guidance_general="" guidance_task="" guidance_risk="" guidance_issue="" calendar_displaydate="2017-06-01T00:00:00" plantaskstatus_color="#dddddd" plantaskstatus_closed="False" plantaskstatus="" planriskstatus_color="#dddddd" planriskstatus_closed="False" planriskstatus="" planissuestatus_color="#dddddd" planissuestatus_closed="False" planissuestatus="" plantaskstatuscomment="" planriskstatuscomment="" planissuestatuscomment="" planprogresstodate="47.0041291512984" list_showgridlines="True" list_fontsize="8.25" printlist_showgridlines="True" printlist_fontsize="6" printlist_rowstripeenabled="True" printlist_rowstripebackgroundcolor="Transparent">
+  <lockoptions cansetplanview="False" caneditlookups="False" cansaveviews="False" candeleteitems="False" />
+  <tasks sortitemname="" sortasc="True" showroottask="True" addidtoname="False" indenttasks="True" showprogressbars="True" showsummarytasks="auto" showpredecessors="True" showdurationasentered="False" ganttdisplayattribute="duration" truncateganttattribute="0" truncategantttaskname="0" ganttdaterangeintervaltype="week" ganttdaterangemanual="False" ganttdaterangestartdate="2020-08-11T08:00:00" ganttdaterangefinishdate="2020-09-07T17:00:00" gantttasknamecolumnwidth="0" ganttfontsize="8" ganttrowfontsize="8" ganttbarheight="10" gantttotalbarheight="14" printganttimagescale="1" printgantttasknamecolumnwidth="0" printganttfontsize="8" printganttrowfontsize="8" printganttbarheight="10" printgantttotalbarheight="14" daterange_includetoday="False" autodaterange_starttype="planstartdate" autodaterange_finishtype="planfinishdate" autodaterange_startnumber="-1" autodaterange_finishnumber="1" autodaterange_startinterval="week" autodaterange_finishinterval="week" defaultsummarytaskcolor="#606060" defaultmilestonecolor="#111111" defaulttaskcolor="#B52818" progressbarcolor="#1BE4D0" colorontaskpercentcomplete="#AAAAAA" colorontaskpercentcompletethreshold="0" ignoretaskspecificcolors="False" milestone_useprogresscolors="True" milestone_showtodayindicator="True" milestone_showinternallabel="True" milestone_showlabelsinchart="True" milestone_showlabelsbelowchart="False" milestone_maxmilestonesdisplayedinmonth="6" milestone_rowheight="0" milestone_rowspacing="0" useplanspecificcalendar="False" filteron="False">
+    <task id="0" name="Projekt_TEMPDATABASE" desc="" comment="" tag="" datecreated="2020-08-18T00:00:00" outlinelevel="0" wbscode="" summary="True" collapsed="False" durationtype="summary" barcolor="" start="2020-08-18T08:00:00" finish="2020-08-31T17:00:00" start_display="18.08.20 08:00" finish_display="31.08.20 17:00" uniqueid="0" duration="10" durationunits="d" durationhours="80" percentcomplete="41.8" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="0" totalcost="0" progresscost="0" cumulativefixedcost="800" cumulativeresourcecost="35200" cumulativetotalcost="36000" cumulativeactualcost="4050" cumulativeprogresscost="10866" predecessorcode="">
+      <task id="1" name="Utworzenie harmonogramu prac" desc="Zaplanowanie i zapisanie w programie Project in a box planu pracy nad projektem." comment="" tag="" datecreated="2020-08-18T11:03:01" outlinelevel="1" wbscode="1" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-18T08:00:00" finish="2020-08-18T17:00:00" start_display="18.08.20 08:00" finish_display="18.08.20 17:00" uniqueid="0" duration="1" durationunits="d" durationhours="8" percentcomplete="95" actualcost="1500" fixedcost="200" fixedactualcost="100" resourcecost="1600" totalcost="1800" progresscost="1710" cumulativefixedcost="200" cumulativeresourcecost="1600" cumulativetotalcost="1800" cumulativeactualcost="1500" cumulativeprogresscost="1710" predecessorcode="">
+        <assignments>
+          <resource name="Project Manager" percentage="100" allocatedhours="8" allocatedcost="1600" actualhours="7" actualcost="1400" resourcecostperhour="200" />
+        </assignments>
+      </task>
+      <task id="2" name="Baza danych" desc="Baza danych IEL" comment="" tag="" datecreated="2020-08-21T09:44:25" outlinelevel="1" wbscode="2" summary="True" collapsed="False" durationtype="summary" barcolor="" start="2020-08-18T08:00:00" finish="2020-08-28T17:00:00" start_display="18.08.20 08:00" finish_display="28.08.20 17:00" uniqueid="0" duration="9" durationunits="d" durationhours="72" percentcomplete="27.5" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="0" totalcost="0" progresscost="0" cumulativefixedcost="400" cumulativeresourcecost="11200" cumulativetotalcost="11600" cumulativeactualcost="600" cumulativeprogresscost="1000" predecessorcode="">
+        <task id="3" name="Wykresy w Python" desc="Dodanie funkcjonalności umożliwiającej programowi rysowanie wykresów na podstawie danych z bazy z uwzględnieniem różnych (lub dowolnych) przedziałów czasowych." comment="" tag="" datecreated="2020-08-18T11:04:00" outlinelevel="2" wbscode="2.1" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-20T08:00:00" finish="2020-08-21T17:00:00" start_display="20.08.20 08:00" finish_display="21.08.20 17:00" uniqueid="0" duration="2" durationunits="d" durationhours="16" percentcomplete="10" actualcost="600" fixedcost="400" fixedactualcost="200" resourcecost="1600" totalcost="2000" progresscost="200" cumulativefixedcost="400" cumulativeresourcecost="1600" cumulativetotalcost="2000" cumulativeactualcost="600" cumulativeprogresscost="200" predecessorcode="">
+          <assignments>
+            <resource name="Sebastian Buczek" percentage="100" allocatedhours="16" allocatedcost="1600" actualhours="4" actualcost="400" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="4" name="Komunkacja z bazą danych" desc="Implementacja algorytmu do komunikacji z arduino (pobieranie danych o temperaturze)." comment="" tag="" datecreated="2020-08-18T11:07:51" outlinelevel="2" wbscode="2.2" summary="False" collapsed="False" durationtype="predecessors" barcolor="" start="2020-08-24T08:00:00" finish="2020-08-26T17:00:00" start_display="24.08.20 08:00" finish_display="26.08.20 17:00" uniqueid="0" duration="3" durationunits="d" durationhours="24" percentcomplete="0" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="2400" totalcost="2400" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="2400" cumulativetotalcost="2400" cumulativeactualcost="0" cumulativeprogresscost="0" predecessorcode="3">
+          <assignments>
+            <resource name="Sebastian Buczek" percentage="100" allocatedhours="24" allocatedcost="2400" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="5" name="Serwer bazy danych" desc="" comment="" tag="" datecreated="2020-08-21T10:09:42" outlinelevel="2" wbscode="2.3" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-18T08:00:00" finish="2020-08-18T17:00:00" start_display="18.08.20 08:00" finish_display="18.08.20 17:00" uniqueid="0" duration="8" durationunits="h" durationhours="8" percentcomplete="100" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="800" totalcost="800" progresscost="800" cumulativefixedcost="0" cumulativeresourcecost="800" cumulativetotalcost="800" cumulativeactualcost="0" cumulativeprogresscost="800" predecessorcode="">
+          <assignments>
+            <resource name="Sebastian Buczek" percentage="100" allocatedhours="8" allocatedcost="800" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="6" name="Program do obslugi bazy danych" desc="Program do obslugi bazy danych napisany w Python" comment="" tag="" datecreated="2020-08-21T10:11:39" outlinelevel="2" wbscode="2.4" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-19T08:00:00" finish="2020-08-28T17:00:00" start_display="19.08.20 08:00" finish_display="28.08.20 17:00" uniqueid="0" duration="8" durationunits="d" durationhours="64" percentcomplete="0" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="6400" totalcost="6400" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="6400" cumulativetotalcost="6400" cumulativeactualcost="0" cumulativeprogresscost="0" predecessorcode="">
+          <assignments>
+            <resource name="Sebastian Buczek" percentage="100" allocatedhours="64" allocatedcost="6400" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+      </task>
+      <task id="7" name="Odczyt temperatur (system Audrino)" desc="" comment="" tag="" datecreated="2020-08-21T09:41:35" outlinelevel="1" wbscode="3" summary="True" collapsed="False" durationtype="summary" barcolor="" start="2020-08-18T08:00:00" finish="2020-08-26T17:00:00" start_display="18.08.20 08:00" finish_display="26.08.20 17:00" uniqueid="0" duration="7" durationunits="d" durationhours="56" percentcomplete="46.5" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="0" totalcost="0" progresscost="0" cumulativefixedcost="200" cumulativeresourcecost="6400" cumulativetotalcost="6600" cumulativeactualcost="1950" cumulativeprogresscost="3036" predecessorcode="">
+        <task id="8" name="Komunikacja moduł ethernet" desc="Zapoznawanie się z technologią, implementacja odczytu temperatury z czujnika i wyświetlania wyników na lokalnym komputerze, konfiguracja modułu ethernet" comment="" tag="" datecreated="2020-08-18T11:13:44" outlinelevel="2" wbscode="3.1" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-19T08:00:00" finish="2020-08-21T17:00:00" start_display="19.08.20 08:00" finish_display="21.08.20 17:00" uniqueid="0" duration="3" durationunits="d" durationhours="24" percentcomplete="86" actualcost="1950" fixedcost="200" fixedactualcost="150" resourcecost="2400" totalcost="2600" progresscost="2236" cumulativefixedcost="200" cumulativeresourcecost="2400" cumulativetotalcost="2600" cumulativeactualcost="1950" cumulativeprogresscost="2236" predecessorcode="">
+          <assignments>
+            <resource name="Wiktor Krazek" percentage="100" allocatedhours="24" allocatedcost="2400" actualhours="18" actualcost="1800" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="9" name="Komunikacja" desc="Implementacja algorytmu komunikacyjnego" comment="" tag="" datecreated="2020-08-18T11:21:32" outlinelevel="2" wbscode="3.2" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-24T08:00:00" finish="2020-08-26T17:00:00" start_display="24.08.20 08:00" finish_display="26.08.20 17:00" uniqueid="0" duration="3" durationunits="d" durationhours="24" percentcomplete="0" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="2400" totalcost="2400" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="2400" cumulativetotalcost="2400" cumulativeactualcost="0" cumulativeprogresscost="0" predecessorcode="">
+          <assignments>
+            <resource name="Wiktor Krazek" percentage="100" allocatedhours="24" allocatedcost="2400" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="10" name="Obsluga czujników temperatury" desc="" comment="" tag="" datecreated="2020-08-21T10:19:42" outlinelevel="2" wbscode="3.3" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-18T08:00:00" finish="2020-08-18T17:00:00" start_display="18.08.20 08:00" finish_display="18.08.20 17:00" uniqueid="0" duration="8" durationunits="h" durationhours="8" percentcomplete="100" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="800" totalcost="800" progresscost="800" cumulativefixedcost="0" cumulativeresourcecost="800" cumulativetotalcost="800" cumulativeactualcost="0" cumulativeprogresscost="800" predecessorcode="">
+          <assignments>
+            <resource name="Wiktor Krazek" percentage="100" allocatedhours="8" allocatedcost="800" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="11" name="Obsluga wyświetlacza" desc="" comment="" tag="" datecreated="2020-08-21T10:27:25" outlinelevel="2" wbscode="3.4" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-20T08:00:00" finish="2020-08-20T17:00:00" start_display="20.08.20 08:00" finish_display="20.08.20 17:00" uniqueid="0" duration="8" durationunits="h" durationhours="8" percentcomplete="0" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="800" totalcost="800" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="800" cumulativetotalcost="800" cumulativeactualcost="0" cumulativeprogresscost="0" predecessorcode="">
+          <assignments>
+            <resource name="Wiktor Krazek" percentage="100" allocatedhours="8" allocatedcost="800" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+      </task>
+      <task id="12" name="Tworzenie dokumentacji technicznej" desc="" comment="" tag="" datecreated="2020-08-21T09:48:37" outlinelevel="1" wbscode="4" summary="True" collapsed="False" durationtype="summary" barcolor="" start="2020-08-19T08:00:00" finish="2020-08-28T17:00:00" start_display="19.08.20 08:00" finish_display="28.08.20 17:00" uniqueid="0" duration="8" durationunits="d" durationhours="64" percentcomplete="40" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="0" totalcost="0" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="12800" cumulativetotalcost="12800" cumulativeactualcost="0" cumulativeprogresscost="5120" predecessorcode="">
+        <task id="13" name="System pomiaru temperatury" desc="" comment="" tag="" datecreated="2020-08-21T09:49:22" outlinelevel="2" wbscode="4.1" summary="False" collapsed="False" durationtype="startandfinishdates" barcolor="" start="2020-08-19T08:00:00" finish="2020-08-28T17:00:00" start_display="19.08.20 08:00" finish_display="28.08.20 17:00" uniqueid="0" duration="8" durationunits="d" durationhours="64" percentcomplete="30" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="6400" totalcost="6400" progresscost="1920" cumulativefixedcost="0" cumulativeresourcecost="6400" cumulativetotalcost="6400" cumulativeactualcost="0" cumulativeprogresscost="1920" predecessorcode="">
+          <assignments>
+            <resource name="Wiktor Krazek" percentage="100" allocatedhours="64" allocatedcost="6400" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="14" name="System baza danych" desc="" comment="" tag="" datecreated="2020-08-21T09:50:39" outlinelevel="2" wbscode="4.2" summary="False" collapsed="False" durationtype="startandfinishdates" barcolor="" start="2020-08-19T08:00:00" finish="2020-08-28T17:00:00" start_display="19.08.20 08:00" finish_display="28.08.20 17:00" uniqueid="0" duration="8" durationunits="d" durationhours="64" percentcomplete="50" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="6400" totalcost="6400" progresscost="3200" cumulativefixedcost="0" cumulativeresourcecost="6400" cumulativetotalcost="6400" cumulativeactualcost="0" cumulativeprogresscost="3200" predecessorcode="">
+          <assignments>
+            <resource name="Sebastian Buczek" percentage="100" allocatedhours="64" allocatedcost="6400" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+      </task>
+      <task id="15" name="Przygotowanie prezentacji" desc="" comment="" tag="" datecreated="2020-08-21T09:54:43" outlinelevel="1" wbscode="5" summary="True" collapsed="False" durationtype="summary" barcolor="" start="2020-08-31T08:00:00" finish="2020-08-31T17:00:00" start_display="31.08.20 08:00" finish_display="31.08.20 17:00" uniqueid="0" duration="1" durationunits="d" durationhours="8" percentcomplete="0" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="0" totalcost="0" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="3200" cumulativetotalcost="3200" cumulativeactualcost="0" cumulativeprogresscost="0" predecessorcode="">
+        <task id="16" name="Baza danych" desc="" comment="" tag="" datecreated="2020-08-21T09:56:07" outlinelevel="2" wbscode="5.1" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-31T08:00:00" finish="2020-08-31T17:00:00" start_display="31.08.20 08:00" finish_display="31.08.20 17:00" uniqueid="0" duration="8" durationunits="h" durationhours="8" percentcomplete="0" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="800" totalcost="800" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="800" cumulativetotalcost="800" cumulativeactualcost="0" cumulativeprogresscost="0" predecessorcode="">
+          <assignments>
+            <resource name="Sebastian Buczek" percentage="100" allocatedhours="8" allocatedcost="800" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="17" name="System pomiarowy temperatury Audrino" desc="" comment="" tag="" datecreated="2020-08-21T09:57:44" outlinelevel="2" wbscode="5.2" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-31T08:00:00" finish="2020-08-31T17:00:00" start_display="31.08.20 08:00" finish_display="31.08.20 17:00" uniqueid="0" duration="8" durationunits="h" durationhours="8" percentcomplete="0" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="800" totalcost="800" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="800" cumulativetotalcost="800" cumulativeactualcost="0" cumulativeprogresscost="0" predecessorcode="">
+          <assignments>
+            <resource name="Sebastian Buczek" percentage="100" allocatedhours="8" allocatedcost="800" actualhours="0" actualcost="0" resourcecostperhour="100" />
+          </assignments>
+        </task>
+        <task id="18" name="Zarządzanie projektem" desc="" comment="" tag="" datecreated="2020-08-21T10:01:40" outlinelevel="2" wbscode="5.3" summary="False" collapsed="False" durationtype="startdateandduration" barcolor="" start="2020-08-31T08:00:00" finish="2020-08-31T17:00:00" start_display="31.08.20 08:00" finish_display="31.08.20 17:00" uniqueid="0" duration="8" durationunits="h" durationhours="8" percentcomplete="0" actualcost="0" fixedcost="0" fixedactualcost="0" resourcecost="1600" totalcost="1600" progresscost="0" cumulativefixedcost="0" cumulativeresourcecost="1600" cumulativetotalcost="1600" cumulativeactualcost="0" cumulativeprogresscost="0" predecessorcode="">
+          <assignments>
+            <resource name="Project Manager" percentage="100" allocatedhours="8" allocatedcost="1600" actualhours="0" actualcost="0" resourcecostperhour="200" />
+          </assignments>
+        </task>
+      </task>
+    </task>
+    <tasklistviewcolumns>
+      <item text="ID" tag="id" width="41" displayindex="0" />
+      <item text="Zarys" tag="outline" width="0" displayindex="1" />
+      <item text="WBS Code" tag="wbscode" width="0" displayindex="2" />
+      <item text="Typ" tag="type" width="0" displayindex="3" />
+      <item text="Nazwa" tag="name" width="136" displayindex="4" />
+      <item text="Opis działania" tag="desc" width="0" displayindex="5" />
+      <item text="Comment" tag="comment" width="0" displayindex="6" />
+      <item text="Tag" tag="tag" width="0" displayindex="7" />
+      <item text="Poprzednik" tag="predecessor" width="0" displayindex="8" />
+      <item text="Początek" tag="start" width="0" displayindex="9" />
+      <item text="Koniec" tag="finish" width="0" displayindex="10" />
+      <item text="Czas trwania" tag="duration" width="0" displayindex="11" />
+      <item text="Zasoby" tag="resources" width="181" displayindex="12" />
+      <item text="Fixed Cost" tag="fixedcost" width="79" displayindex="13" />
+      <item text="Resource Cost" tag="resourcecost" width="91" displayindex="14" />
+      <item text="Total Cost" tag="totalcost" width="81" displayindex="15" />
+      <item text="%  Complete" tag="percentcomplete" width="86" displayindex="16" />
+      <item text="Progress Cost" tag="progresscost" width="108" displayindex="17" />
+      <item text="Actual Cost" tag="actualcost" width="87" displayindex="18" />
+      <item text="Cumulative Fixed Cost" tag="cumulativefixedcost" width="127" displayindex="19" />
+      <item text="Cumulative Resource Cost" tag="cumulativeresourcecost" width="144" displayindex="20" />
+      <item text="Cumulative Total Cost" tag="cumulativetotalcost" width="137" displayindex="21" />
+      <item text="Cumulative Progress Cost" tag="cumulativeprogresscost" width="139" displayindex="22" />
+      <item text="Cumulative Actual Cost" tag="cumulativeactualcost" width="144" displayindex="23" />
+      <item text="Actual Fixed Cost" tag="fixedactualcost" width="0" displayindex="24" />
+      <item text="Actual Resource Cost" tag="resourceactualcost" width="0" displayindex="25" />
+      <item text="Cumulative Actual Fixed Cost" tag="cumulativefixedactualcost" width="0" displayindex="26" />
+      <item text="Cumulative Actual Resource Cost" tag="cumulativeresourceactualcost" width="0" displayindex="27" />
+      <item text="Date Created" tag="datecreated" width="0" displayindex="28" />
+      <item text="Age in Days" tag="ageindays" width="0" displayindex="29" />
+    </tasklistviewcolumns>
+    <plantaskfilterset name="" desc="" currentfiltername="Top 5">
+      <plantaskfilter enabled="True" name="Top 5" desc="" type="top" action="include" searchterm="" percentcomplete="0" f1="5" date1_usenow="True" date2_usenow="True" date1_date="2012-12-05T08:48:04" date1_date_display="05.12.12 08:48" date2_date="2012-12-05T08:48:04" date2_date_display="05.12.12 08:48" date1_timespan_number="0" date2_timespan_number="3" date1_timespan_interval="day" date2_timespan_interval="week" durationstring="" outlinelevel1="0" outlinelevel2="0" />
+    </plantaskfilterset>
+    <currentsavedtaskview>
+      <savedtaskview name="&lt;Costs&gt;" tag="builtin" desc="" ismodified="False" daterangemodeauto="True" start="2012-11-21T08:00:00" start_display="21.11.12 08:00" finish="2013-01-22T09:00:00" finish_display="22.01.13 09:00" daterange_includetoday="False" daterangeintervaltype="week" sortitemname="" sortasc="True" addidtoname="False" indenttasks="True" showsummarytasks="auto" showlistviewgridlines="True" showprogressbars="True" showpredecessors="True" showroottask="True" showdurationasentered="False" ganttdisplayattribute="duration" truncateganttattribute="0" truncategantttaskname="0" maxoutlinelevel="0" datedisplayformat="" taskpercentcompletethreshold="0" printtitle="" autodaterange_starttype="planstartdate" autodaterange_finishtype="planfinishdate" autodaterange_startnumber="-1" autodaterange_finishnumber="1" autodaterange_startinterval="week" autodaterange_finishinterval="week" color_defaultsummarytask="#606060" color_defaultmilestone="#111111" color_defaulttask="#B52818" color_ontaskpercentcomplete="#AAAAAA" color_progressbar="#1BE4D0" ignoretaskspecificcolors="False" splitterganttfraction_use="False" splitterganttfraction="0" filteron="False" milestone_useprogresscolors="True" milestone_showtodayindicator="True" milestone_showinternallabel="True" milestone_showlabelsinchart="True" milestone_showlabelsbelowchart="False" milestone_maxmilestonesdisplayedinmonth="6" milestone_rowheight="0" milestone_rowspacing="0">
+        <tasklistviewcolumns>
+          <item text="ID" tag="id" width="41" displayindex="0" />
+          <item text="Outline" tag="outline" width="0" displayindex="1" />
+          <item text="WBS Code" tag="wbscode" width="0" displayindex="2" />
+          <item text="Type" tag="type" width="0" displayindex="3" />
+          <item text="Name" tag="name" width="136" displayindex="4" />
+          <item text="Description" tag="desc" width="0" displayindex="5" />
+          <item text="Comment" tag="comment" width="0" displayindex="6" />
+          <item text="Tag" tag="tag" width="0" displayindex="7" />
+          <item text="Predecessor" tag="predecessor" width="0" displayindex="8" />
+          <item text="Start" tag="start" width="0" displayindex="9" />
+          <item text="Finish" tag="finish" width="0" displayindex="10" />
+          <item text="Duration" tag="duration" width="0" displayindex="11" />
+          <item text="Resources" tag="resources" width="181" displayindex="12" />
+          <item text="Fixed Cost" tag="fixedcost" width="79" displayindex="13" />
+          <item text="Resource Cost" tag="resourcecost" width="91" displayindex="14" />
+          <item text="Total Cost" tag="totalcost" width="81" displayindex="15" />
+          <item text="%  Complete" tag="percentcomplete" width="86" displayindex="16" />
+          <item text="Progress Cost" tag="progresscost" width="108" displayindex="17" />
+          <item text="Actual Cost" tag="actualcost" width="87" displayindex="18" />
+          <item text="Cumulative Fixed Cost" tag="cumulativefixedcost" width="127" displayindex="19" />
+          <item text="Cumulative Resource Cost" tag="cumulativeresourcecost" width="144" displayindex="20" />
+          <item text="Cumulative Total Cost" tag="cumulativetotalcost" width="137" displayindex="21" />
+          <item text="Cumulative Progress Cost" tag="cumulativeprogresscost" width="139" displayindex="22" />
+          <item text="Cumulative Actual Cost" tag="cumulativeactualcost" width="144" displayindex="23" />
+        </tasklistviewcolumns>
+        <plantaskfilterset name="" desc="" currentfiltername="Top 5">
+          <plantaskfilter enabled="True" name="Top 5" desc="" type="top" action="include" searchterm="" percentcomplete="0" f1="5" date1_usenow="True" date2_usenow="True" date1_date="2012-12-05T08:48:04" date1_date_display="05.12.12 08:48" date2_date="2012-12-05T08:48:04" date2_date_display="05.12.12 08:48" date1_timespan_number="0" date2_timespan_number="3" date1_timespan_interval="day" date2_timespan_interval="week" durationstring="" outlinelevel1="0" outlinelevel2="0" />
+        </plantaskfilterset>
+      </savedtaskview>
+    </currentsavedtaskview>
+    <savedtaskviews />
+  </tasks>
+  <resources name="" desc="">
+    <resource name="Project Manager" initials="" costperhour="200" />
+    <resource name="Business Analyst" initials="" costperhour="150" />
+    <resource name="Wiktor Krazek" initials="" costperhour="100" />
+    <resource name="Sebastian Buczek" initials="" costperhour="100" />
+  </resources>
+  <risks showresponses="True" showallresponses="False" sortitemname="" sortasc="False" color_risk="" responsesortitemname="" responsesortasc="False" filteron="False">
+    <risk id="1" uniqueid="1" code="" owner="Project Manager" dateregistered="2017-12-21T00:00:00" cause="Enter your risks here" event="" effect="" comment="" tag="Example" expectedvalue_inherent="0" expectedvalue_residual="0" riskrating_inherent="1" riskrating_residual="1" riskrating_inherent_color="#00DD00" riskrating_residual_color="#00DD00" status_color="#dd0000" status_closed="False" status="Open" category="Other" inheritresidual="False" impact_inherent_value="1" impact_inherent="Negligable" impact_residual_value="1" impact_residual="Negligable" probability_inherent_value="1" probability_inherent="1" probability_residual_value="1" probability_residual="1" proximity_inherent_value="1" proximity_inherent="Long Term" proximity_residual_value="1" proximity_residual="Long Term">
+      <responses />
+    </risk>
+    <risklistviewcolumns>
+      <item text="ID" tag="id" width="40" displayindex="0" />
+      <item text="Unique ID" tag="uniqueid" width="74" displayindex="1" />
+      <item text="Code" tag="code" width="60" displayindex="2" />
+      <item text="Kategoria" tag="category" width="80" displayindex="3" />
+      <item text="Status" tag="status" width="90" displayindex="4" />
+      <item text="Przyczyna" tag="cause" width="120" displayindex="5" />
+      <item text="Zdarzenie" tag="event" width="120" displayindex="6" />
+      <item text="Skutek" tag="effect" width="120" displayindex="7" />
+      <item text="Właściciel" tag="owner" width="80" displayindex="8" />
+      <item text="Comment" tag="comment" width="76" displayindex="9" />
+      <item text="Tag" tag="tag" width="60" displayindex="10" />
+      <item text="Data" tag="date" width="80" displayindex="11" />
+      <item text="Inherentny wpływ" tag="impact_inherent" width="100" displayindex="12" />
+      <item text="Inherent Impact Value" tag="impact_inherent_value" width="60" displayindex="13" />
+      <item text="Inherentne prawdopodobieństwo" tag="probability_inherent" width="100" displayindex="14" />
+      <item text="Inherent Probability Value" tag="probability_inherent_value" width="60" displayindex="15" />
+      <item text="Inherentna bliskość" tag="proximity_inherent" width="100" displayindex="16" />
+      <item text="Inherent Proximity Value" tag="proximity_inherent_value" width="60" displayindex="17" />
+      <item text="Inherentny ranking" tag="risk_rating_inherent" width="100" displayindex="18" />
+      <item text="Inherentna wartość oczekiwana" tag="expected_value_inherent" width="100" displayindex="19" />
+      <item text="Rezydualny wpływ" tag="impact_residual" width="100" displayindex="20" />
+      <item text="Residual Impact Value" tag="impact_residual_value" width="60" displayindex="21" />
+      <item text="Rezydualne prawdopodobieństwo" tag="probability_residual" width="100" displayindex="22" />
+      <item text="Residual Probability Value" tag="probability_residual_value" width="60" displayindex="23" />
+      <item text="Rezydualna bliskość" tag="proximityresidual" width="60" displayindex="24" />
+      <item text="Residual Proximity Value" tag="proximity_residual_value" width="60" displayindex="25" />
+      <item text="Rezydualny ranking" tag="risk_rating_residual" width="100" displayindex="26" />
+      <item text="Rezydualna wartość oczekiwana" tag="expected_value_residual" width="100" displayindex="27" />
+      <item text="Response Count" tag="responsecount" width="60" displayindex="28" />
+      <item text="Age In Days" tag="ageindays" width="0" displayindex="29" />
+    </risklistviewcolumns>
+    <responselistviewcolumns>
+      <item text="Risk ID" tag="riskid" width="66" displayindex="0" />
+      <item text="Response ID" tag="id" width="90" displayindex="1" />
+      <item text="ID" tag="uniqueid" width="90" displayindex="2" />
+      <item text="Kategoria" tag="category" width="90" displayindex="3" />
+      <item text="Opis działania" tag="description" width="105" displayindex="4" />
+      <item text="Comment" tag="comment" width="105" displayindex="5" />
+      <item text="Właściciel" tag="owner" width="105" displayindex="6" />
+      <item text="Wykonawca reakcji" tag="actionee" width="105" displayindex="7" />
+      <item text="Status" tag="status" width="60" displayindex="8" />
+      <item text="Data przydzielenia" tag="dateallocated" width="60" displayindex="9" />
+      <item text="Data wymagana" tag="datedue" width="60" displayindex="10" />
+    </responselistviewcolumns>
+    <planriskfilterset name="" desc="" currentfiltername="" />
+    <savedriskviews />
+  </risks>
+  <issues showresponses="True" showallresponses="False" severityrange="0,10" cumulativecostimpact="0" cumulativetimeimpact="0" numberofqualityimpacts="0" averagequalityimpactrating="0" sortitemname="" sortasc="False" color_issue="" responsesortitemname="" responsesortasc="False" filteron="False">
+    <issue id="1" uniqueid="1" code="" raisedby="Project Manager" dateraised="2015-01-05T00:00:00" owner="Project Manager" desc="Enter your issues here" tag="Example" severity="0" dateoflastupdate="2017-12-21T10:30:23" dateofclosure="2017-12-21T10:30:09" type="Issue - RFC" status_color="#dd0000" status_closed="False" status="Open" priority_value="1" priority="Low" comment="" costimpact="0" timeimpact="0" qualityimpact="" qualityimpactrating_value="0" qualityimpactrating="0">
+      <responses />
+    </issue>
+    <issuelistviewcolumns>
+      <item text="ID" tag="id" width="40" displayindex="0" />
+      <item text="Unique ID" tag="uniqueid" width="80" displayindex="1" />
+      <item text="Code" tag="code" width="60" displayindex="2" />
+      <item text="Opis działania" tag="description" width="120" displayindex="3" />
+      <item text="Comment" tag="comment" width="60" displayindex="4" />
+      <item text="Tag" tag="tag" width="60" displayindex="5" />
+      <item text="Typ" tag="type" width="80" displayindex="6" />
+      <item text="Status" tag="status" width="100" displayindex="7" />
+      <item text="Zgłoszone przez" tag="raisedby" width="80" displayindex="8" />
+      <item text="Data zgłoszenia" tag="dateraised" width="120" displayindex="9" />
+      <item text="Właściciel" tag="owner" width="120" displayindex="10" />
+      <item text="Priorytet" tag="priority" width="80" displayindex="11" />
+      <item text="Priority Value" tag="priorityvalue" width="60" displayindex="12" />
+      <item text="Istotność" tag="severityvalue" width="100" displayindex="13" />
+      <item text="Ostatnie uaktualnienie" tag="datelastupdate" width="100" displayindex="14" />
+      <item text="Data zamknięcia" tag="dateclosure" width="100" displayindex="15" />
+      <item text="Response Count" tag="responsecount" width="60" displayindex="16" />
+      <item text="Age In Days" tag="ageindays" width="0" displayindex="17" />
+      <item text="Time Impact" tag="timeimpact" width="0" displayindex="18" />
+      <item text="Cost Impact" tag="costimpact" width="0" displayindex="19" />
+      <item text="Quality Impact" tag="qualityimpact" width="0" displayindex="20" />
+      <item text="Quality Impact Rating" tag="qualityimpactrating" width="0" displayindex="21" />
+    </issuelistviewcolumns>
+    <responselistviewcolumns>
+      <item text="Issue ID" tag="issueid" width="71" displayindex="0" />
+      <item text="Response ID" tag="id" width="90" displayindex="1" />
+      <item text="ID" tag="uniqueid" width="90" displayindex="2" />
+      <item text="Kategoria" tag="category" width="90" displayindex="3" />
+      <item text="Opis działania" tag="description" width="105" displayindex="4" />
+      <item text="Comment" tag="comment" width="90" displayindex="5" />
+      <item text="Właściciel" tag="owner" width="105" displayindex="6" />
+      <item text="Wykonawca reakcji" tag="actioneee" width="105" displayindex="7" />
+      <item text="Status" tag="status" width="60" displayindex="8" />
+      <item text="Data przydzielenia" tag="dateallocated" width="60" displayindex="9" />
+      <item text="Data wymagana" tag="datedue" width="60" displayindex="10" />
+    </responselistviewcolumns>
+    <planissuefilterset name="" desc="" currentfiltername="" />
+    <savedissueviews />
+  </issues>
+  <lookups>
+    <lookup name="issuetype" desc="Issue Type" type="string">
+      <item id="1" name="Issue - RFC" />
+      <item id="2" name="Issue - OS" />
+      <item id="3" name="Issue - P" />
+      <item id="4" name="Action" />
+      <item id="5" name="Decision" />
+    </lookup>
+    <lookup name="issuepriority" desc="Issue Priority" type="value">
+      <item id="1" name="Low" value="1" />
+      <item id="2" name="Medium" value="2" />
+      <item id="3" name="High" value="3" />
+      <item id="4" name="Urgent" value="4" />
+    </lookup>
+    <lookup name="issuestatus" desc="Issue Status" type="status">
+      <item id="1" name="Open" color="#dd0000" closed="False" />
+      <item id="2" name="Action Pending" color="#dddd00" closed="False" />
+      <item id="3" name="Closed" color="#00dd00" closed="True" />
+    </lookup>
+    <lookup name="riskcategory" desc="Risk Category" type="string">
+      <item id="1" name="Commercial" />
+      <item id="2" name="Technology" />
+      <item id="3" name="Legislation" />
+      <item id="4" name="Operational" />
+      <item id="5" name="Environmental" />
+      <item id="6" name="Other" />
+    </lookup>
+    <lookup name="riskimpact" desc="Risk Impact" type="value">
+      <item id="1" name="Negligable" value="1" />
+      <item id="2" name="Low" value="2" />
+      <item id="3" name="Medium" value="3" />
+      <item id="4" name="High" value="4" />
+      <item id="5" name="Severe" value="5" />
+    </lookup>
+    <lookup name="riskproximity" desc="Risk Proximity" type="value">
+      <item id="1" name="Long Term" value="1" />
+      <item id="2" name="Medium Term" value="1" />
+      <item id="3" name="Short Term" value="1" />
+      <item id="4" name="Now" value="1" />
+    </lookup>
+    <lookup name="riskstatus" desc="Risk Status" type="status">
+      <item id="1" name="Open" color="#dd0000" closed="False" />
+      <item id="2" name="Action Pending" color="#dddd00" closed="False" />
+      <item id="3" name="Closed" color="#00dd00" closed="True" />
+    </lookup>
+    <lookup name="responsecategory" desc="Response Category" type="string">
+      <item id="1" name="Avoidance" />
+      <item id="2" name="Mitigation" />
+      <item id="3" name="Acceptance" />
+    </lookup>
+    <lookup name="responsestatus" desc="Response Status" type="status">
+      <item id="1" name="Open" color="#FFFFFF" closed="False" />
+      <item id="2" name="Closed" color="#FFFFFF" closed="False" />
+    </lookup>
+    <lookup name="riskprobability" desc="Risk Probability" type="value">
+      <item id="1" name="Highly Unlikely" value="1" />
+      <item id="2" name="Unlikely" value="2" />
+      <item id="3" name="Possible" value="3" />
+      <item id="4" name="Likely" value="4" />
+      <item id="5" name="Highly Likely" value="5" />
+    </lookup>
+    <lookup name="plantaskstatus" desc="Plan Task Status" type="status">
+      <item id="1" name="" color="#dddddd" closed="False" />
+      <item id="2" name="Green" color="#00dd00" closed="False" />
+      <item id="3" name="Amber" color="#ffc200" closed="False" />
+      <item id="4" name="Red" color="#dd0000" closed="False" />
+    </lookup>
+    <lookup name="planriskstatus" desc="Plan Risk Status" type="status">
+      <item id="1" name="" color="#dddddd" closed="False" />
+      <item id="2" name="Green" color="#00dd00" closed="False" />
+      <item id="3" name="Amber" color="#ffc200" closed="False" />
+      <item id="4" name="Red" color="#dd0000" closed="False" />
+    </lookup>
+    <lookup name="planissuestatus" desc="Plan Issue Status" type="status">
+      <item id="1" name="" color="#dddddd" closed="False" />
+      <item id="2" name="Green" color="#00dd00" closed="False" />
+      <item id="3" name="Amber" color="#ffc200" closed="False" />
+      <item id="4" name="Red" color="#dd0000" closed="False" />
+    </lookup>
+    <lookup name="riskratingrag" desc="Risk Rating RAG" type="rag">
+      <item id="1" name="Green" value="0" color="#00dd00" />
+      <item id="2" name="Amber" value="7" color="#ffc200" />
+      <item id="3" name="Red" value="15" color="#dd0000" />
+    </lookup>
+    <lookup name="issuequalityimpactrating" desc="Issue Quality Impact Rating" type="value">
+      <item id="1" name="0" value="0" />
+      <item id="2" name="1" value="1" />
+      <item id="3" name="2" value="2" />
+      <item id="4" name="3" value="3" />
+      <item id="5" name="4" value="4" />
+      <item id="6" name="5" value="5" />
+      <item id="7" name="6" value="6" />
+      <item id="8" name="7" value="7" />
+      <item id="9" name="8" value="8" />
+      <item id="10" name="9" value="9" />
+      <item id="11" name="10" value="10" />
+    </lookup>
+  </lookups>
+</plan>

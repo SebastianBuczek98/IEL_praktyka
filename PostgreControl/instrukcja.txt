@@ -1,0 +1,1 @@
+Po zainstalowaniu należy przejść do folderu dist, a następnie wyszukać i uruchomić main.exe
